@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "timeseries-pytorch"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "sachaRfd"}
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pre-commit",
+    "torch",
+    "matplotlib",
+    "numpy",
+    "scipy",
+    "tqdm",
+    "scikit-learn"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = {find = {where = ["src"]}}
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.rst"]
